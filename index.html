@@ -15,58 +15,48 @@
 
         <div class="main-box">
 
-            <div class="cantidad-de-jugadores">
-                <h2 class="titulos">¿Cuantos van a jugar?</h2>
-                <p>Ingresa el número de participantes</p>
-                <small>El mínimo de participantes es 2 y el máximo es 10</small>
-                <small>recuerda que la cantidad siempre tiene que ser par</small>
-                <div class="cantidad-acciones">
-                    <button class="boton-menos" id="boton-menos" >-</button>
-                    <input class="cantidad" type="number" id="num-participantes" min="2" max="10" value="2" title="Número de participantes" required></input>
-                    <button class="boton-mas" id="boton-mas">+</button>
-                </div>
-            </div>
-
-            <div class="jugadores" >
+            <div class="jugadores">
                 <h2 class="titulos">¿Como se llaman?</h2>
                 <p>Ingresa el nombre de los participantes</p>
                 <div class="jugador">
-                    <input type="text" class="nombre" placeholder="Nombre" required></input>
-                    <button class="boton-agregar" id="boton-agregar"><i class="bi bi-plus-lg"></i> Agregar</button>
+                    <input type="text" id="nombre" class="nombre" placeholder="Nombre" required>
+                    <button id="boton-agregar" class="boton-agregar"><i class="bi bi-plus-lg"></i> Agregar</button>
                 </div>
+                <small id="small">El mínimo de participantes es 2 y el máximo es 100</small>
+                <small>recuerda que la cantidad siempre tiene que ser par</small>
             </div>
 
-            <div class="lista-de-jugadores">
+            <div id="lista-de-jugadores" class="lista-de-jugadores">
                 <h2 class="titulos">Lista de jugadores</h2>
-                <p>Estos son los jugadores que van a participar</p>
-                <ul id="lista-jugadores">
-                    <li>Nombre 1 <button class="boton-eliminar" >Eliminar</button></li>
-                    <li>Nombre 2 <button class="boton-eliminar" >Eliminar</button></li>
-                </ul>
+                <p class="lista-llena disabled">Estos son los jugadores que van a participar</p>
+                <p class="lista-vacia">La lista esta vacia</p>
+                <div id="lista-jugadores">
+                    <!-- Los elementos de la lista se agregarán aquí dinámicamente -->
+                </div>
                 <button class="vaciar-lista" id="vaciar-lista"><i class="bi bi-trash"></i> Vaciar lista</button>
             </div>
 
             <div class="sorteo">
-                <h2 class="titulos">Sorteo</h2>
                 <p>Presiona el botón para realizar el sorteo</p>
                 <button class="boton-sorteo" ><i class="bi bi-gift"></i> Sortear</button>
             </div>
 
-            <div class="resultado-sorteo">
+            <div class="resultado-sorteo disabled">
                 <h2>Resultado del sorteo</h2>
                 <p>Estos son los resultados del sorteo</p>
-                <ul id="resultado-sorteo">
-                    <li><span>Nombre 1</span> es el amigo secreto de <span>Nombre 2</span></li>
-                    <li><span>Nombre 2</span> es el amigo secreto de <span>Nombre 1</span></li>
-                </ul>
+                <div class="resultados-sorteo">
+                    <ul id="resultado-sorteo">
+                        <!-- Los elementos de la lista se agregarán aquí dinámicamente -->
+                    </ul>
+                </div>
                 <div class="acciones-sorteo">
                     <button class="boton-sorteo" ><i class="bi bi-gift"></i> Sortear de nuevo</button>
+                    <button class="boton-volver"><i class="bi bi-arrow-left"> Volver</i></button>
                     <button class="reiniciar-sorteo"><i class="bi bi-arrow-counterclockwise"></i> Reiniciar sorteo</button>
                 </div>
             </div>
-
         </div>
-
     </div>
 </body>
+<script src="app.js"></script>
 </html>

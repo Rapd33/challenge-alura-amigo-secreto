@@ -24,13 +24,6 @@ a {
     text-decoration: none;
 }
 
-input[type="number"]::-webkit-inner-spin-button, input[type="number"] {
-    -webkit-appearance: none;
-    margin: 0;
-    -moz-appearance: none;
-    appearance: none;
-}
-
 body {
     background-color: var(--clr-main-lighter);
     color: var(--clr-main-dark);
@@ -57,7 +50,7 @@ h1 {
 p {
     font-size: 1.2rem;
     text-align: center;
-    padding: 1rem;
+    margin: 1rem;
 }
 
 span {
@@ -66,7 +59,7 @@ span {
     color: var(--clr-main-dark);
 }
 
-small{
+small {
     display: block;
     font-size: small;
 }
@@ -94,16 +87,6 @@ small{
     border-radius: 1rem;
 }
 
-.cantidad-acciones{
-    margin-top: 2rem;
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    align-items: center;
-}
-
-.boton-menos,
-.boton-mas, 
 .boton-eliminar
  {
     display: inline;
@@ -114,25 +97,13 @@ small{
     cursor: pointer;
 }
 
-.boton-menos:hover,
-.boton-mas:hover, 
 .boton-eliminar:hover{
-    color: var(--clr-main);
-}
-
-.cantidad {
-    display: inline;
-    color: var(--clr-main-light);
-    background-color: transparent;
-    border: none;
-    font-size: medium;
-    gap: 1rem;
-    align-items: center;
-    text-align: center;
+    color: var(--clr-main-dark);
 }
 
 .vaciar-lista,
 .reiniciar-sorteo,
+.boton-volver,
 .boton-sorteo{
     display: inline;
     align-items: center;
@@ -148,6 +119,7 @@ small{
 }
 
 .vaciar-lista:hover,
+.boton-volver:hover,
 .reiniciar-sorteo:hover,
 .boton-sorteo:hover, 
 .boton-agregar:hover{
@@ -159,12 +131,13 @@ small{
     display: flex;
     flex-direction: row;
     margin-top: 1rem;
+    margin-bottom: 2rem;
     align-items: center;
     justify-items: center;
     text-align: center;
 }
 
-.nombre{
+.nombre {
     display: flex;
     width: 74%;
     height: 100%;
@@ -201,9 +174,9 @@ small{
     gap: 1rem;
 }
 .acciones-sorteo {
-    margin-top: 1rem;
+    margin: 1rem;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
 }
 
